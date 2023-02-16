@@ -10,6 +10,9 @@ import { FooterComponent } from './common/footer/footer.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { CarouselDealsComponent } from './common/carousel-deals/carousel-deals.component';
 import { PeopleCardComponent } from './common/people-card/people-card.component';
+import { BannerComponent } from './common/banner/banner.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,16 @@ import { PeopleCardComponent } from './common/people-card/people-card.component'
     FooterComponent,
     ProductCardComponent,
     CarouselDealsComponent,
-    PeopleCardComponent
+    PeopleCardComponent,
+    BannerComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
