@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tshirts } from 'src/app/common/content';
+import { dealsContent, peopleData, tshirts } from 'src/app/common/content';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,8 @@ import { tshirts } from 'src/app/common/content';
 })
 export class HomeComponent implements OnInit {
   tshirtData= tshirts;
+  dealsData = dealsContent;
+  peopleData= peopleData;
 
   constructor() { }
 

@@ -1,0 +1,68 @@
+.card {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 5%;
+    // width: 50%;
+    // /* or 100px */
+    // border-left: 10px solid magenta;
+
+    &::after{
+            content: "";
+            background: #bf2a2a;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 70%;
+            width: 5px;
+    }
+
+    .card-img-overlay {
+        padding: 0 1% 0 0;
+        top: 90%;
+
+        // span:nth-child(1) {
+        //     color: yellow;
+        //     font-size: 3rem;
+        //     margin-top: -4%;
+        // }
+
+        ul li::before {
+            content: "\2022";
+            color: yellow;
+            font-weight: bold;
+            display: inline-block;
+            width: 0.6rem;
+            margin-left: -1em;
+        }
+    }
+}
+
+
+@media only screen and (max-width:1400px) {
+    .card-img-overlay {
+        top: 84% !important;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .card-img-overlay {
+        top: 80% !important;
+
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .card-img-overlay {
+        top: 50% !important;
+
+        ul li {
+            font-weight: 0.5rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width:770px) {
+    .card-img-overlay {
+        top: 80% !important;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="row">
+    <div *ngFor="let item of peopleData" class="col-md-3 col-sm-6">
+        <div class="card text-bg-dark">
+            <img [src]="item.image" class="card-img">
+            <div class="card-img-overlay">
+                <ul><li>&nbsp;{{item.comment}}</li></ul>
+            </div>
+        </div>
+    </div>
+</div>
