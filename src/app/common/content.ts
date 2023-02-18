@@ -128,3 +128,83 @@ export const peopleData: any = [
         comment: 'Wearing my favorite t-shirt from my favorite place. I feel relaxed.'
     }
 ]
+
+export const recentlyViewed: any = [
+    {
+        carouselItem: 'carousel-item active',
+        cardData: [
+            {
+                cardClass: 'card red',
+                title: 'THIS IS THE TITLE',
+                image: '../../../assets/clothes/cd1-removebg-preview.png',
+                price: '400'
+            },
+            {
+                cardClass: 'card brown',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd2-removebg-preview.png',
+                price: '400'
+            },
+            {
+                cardClass: 'card black',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd3-removebg-preview.png',
+                price: '400'
+            }
+        ]
+    },
+    {
+        carouselItem: 'carousel-item',
+        cardData: [
+            {
+                cardClass: 'card purple',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd4-removebg-preview.png',
+                price: '400'
+            },
+            {
+                cardClass: 'card blue',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd5-removebg-preview.png',
+                price: '400'
+            },
+            {
+                cardClass: 'card purple',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd6-removebg-preview.png',
+                price: '400'
+            }
+        ]
+    },
+    {
+        carouselItem: 'carousel-item',
+        cardData: [
+            {
+                cardClass: 'card black',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd7-removebg-preview.png',
+                price: '400'
+            },
+            {
+                cardClass: 'card pink',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd8-removebg-preview.png',
+                price: '400'
+            },
+            {
+                cardClass: 'card brown',
+                title: 'THIS IS THE TITLE',
+                text: "That's enough social interaction for the day.",
+                image: '../../../assets/clothes/cd9-removebg-preview.png',
+                price: '400'
+            }
+        ]
+    },
+]

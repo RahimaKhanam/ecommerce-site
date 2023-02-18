@@ -1,0 +1,141 @@
+.heading{
+    margin-bottom: -6% !important;
+    p{
+        font-size: 1.1rem;
+        color: black;
+    }
+}
+.carousel {
+    overflow: hidden;
+
+    .carousel-control-prev-icon {
+        color: #474747;
+        background-image: url("../../../assets/arrow-left.png") !important;
+    }
+
+    .carousel-control-next-icon {
+        color: #474747;
+        background-image: url("../../../assets/arrow-right.png") !important;
+    }
+
+    // .carousel-control-prev {
+    //     width: 30%;
+    //     position: absolute;
+    //     left: -12%;
+    // }
+
+    // .carousel-control-next {
+    //     width: 30%;
+    //     position: absolute;
+    //     right: -12%;
+    // }
+
+    .carousel-control-prev {
+        position: absolute;
+        bottom: 90%;
+        left: 80%;
+    }
+
+    .carousel-control-next {
+        position: absolute;
+        bottom: 90%;
+        right: -2%;
+    }
+
+}
+
+
+.card {
+    border: none;
+    border-radius: 0;
+
+    .card-footer{
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .card-text {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    }
+}
+
+.red {
+    background-color: rgba(186, 42, 42, 0.2);
+
+    .card-body {
+        color: #ba2a2a;
+    }
+}
+
+.brown {
+    background-color: rgba(102, 51, 0, 0.2);
+
+    .card-body {
+        color: #663300;
+    }
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    .card-body {
+        color: #000;
+    }
+}
+
+.purple {
+    background-color: rgba(153, 51, 153, 0.2);
+
+    .card-body {
+        color: #993399;
+    }
+}
+
+.pink {
+    background-color: rgba(255, 102, 153, 0.2);
+
+    .card-body {
+        color: #FF6699;
+    }
+}
+
+.blue {
+    background-color: rgba(51, 51, 204, 0.2);
+
+    .card-body {
+        color: #3333CC;
+    }
+}
+
+@media only screen and (max-width:770px) {
+    .carousel-control-prev {
+        bottom: 97%;
+        left: -11%;
+    }
+
+    .carousel-control-next {
+        bottom: 97%;
+        left: -2%;
+    }
+
+    .card {
+        margin-bottom: 5%;
+
+        .card-title {
+            font-size: 1.7rem;
+
+        }
+
+        .card-text {
+            font-size: 1.5rem;
+            padding-top: 0% !important;
+        }
+
+        .img-fluid {
+            height: 200px;
+            width: auto;
+        }
+    }
+}

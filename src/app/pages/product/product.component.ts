@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { tshirts } from 'src/app/common/content';
 
 @Component({
   selector: 'product',
@@ -22,6 +23,9 @@ export class ProductComponent implements OnInit {
     quantity: 0
   }
   mainImage: any;
+  panelOpenState = false;
+  tshirtData= tshirts;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -13,6 +13,7 @@ import { PeopleCardComponent } from './common/people-card/people-card.component'
 import { BannerComponent } from './common/banner/banner.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { ProductComponent } from './pages/product/product.component';
+import { RecentlyViewedCardComponent } from './common/recently-viewed-card/recently-viewed-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductComponent } from './pages/product/product.component';
     CarouselDealsComponent,
     PeopleCardComponent,
     BannerComponent,
-    ProductComponent
+    ProductComponent,
+    RecentlyViewedCardComponent
   ],
   imports: [
     BrowserModule,

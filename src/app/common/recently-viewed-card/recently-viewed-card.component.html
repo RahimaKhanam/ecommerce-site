@@ -1,0 +1,32 @@
+<div class="heading">
+    <p>RECENTLY VIEWED</p>
+</div>
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div *ngFor="let item of recentlyViewed" [class]="item.carouselItem">
+            <div class="row mt-5">
+                <div *ngFor="let data of item.cardData" class="col-md-4">
+                    <div [class]="data.cardClass">
+                        <div class="card-body">
+                            <img class="img-fluid" [src]="data.image" alt="">
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-text">{{data.title}}</p>
+                            <p class="card-text">{{data.price}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

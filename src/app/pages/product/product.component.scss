@@ -4,8 +4,7 @@
 
     /** Breadcrumb **/
     .breadcrumb {
-        border-radius: 8px;
-        font-size: 15px;
+        font-size: 1.1rem;
 
         span {
             display: inline-flex;
@@ -19,6 +18,7 @@
             a {
                 text-decoration: none;
                 color: black;
+                text-transform: uppercase;
             }
         }
     }
@@ -210,6 +210,7 @@
 
             .input-number {
                 margin-top: 2%;
+
                 .btn-light {
                     background-color: white;
                     height: 40px;
@@ -255,7 +256,53 @@
             }
         }
 
+
+
     }
+
+    .accordion {
+        margin: 0;
+        padding: 0;
+
+        .accordion-button {
+            padding: 0;
+        }
+    }
+
+    .product-reviews {
+        h2 {
+            margin: 2% 0;
+            color: #bf2626;
+            font-weight: 600;
+        }
+
+        .stars {
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .review {
+            display: flex;
+            flex-direction: row;
+            align-items: center !important;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0.5% 0 0 0;
+            font-size: 1rem;
+
+            .mat-progress-bar {
+                width: 50%;
+            }
+
+        }
+    }
+}
+
+.heading {
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin: 3% 0;
 }
 
 /** Responsive Mobile **/
@@ -279,16 +326,32 @@
         position: relative;
     }
 
-    .product-image .product-image-main {
-        width: 100%;
-        height: 280px;
+    .product-image {
+        .col-2{
+            padding: 0;
+        }
+        .product-image-main {
+            height: 200px !important;
+            img{
+                text-align: center !important;
+            }
+        }
     }
 
     .product-image-slider {
-        gap: 5px;
+        margin-top: 250px;
+        display: flex;
+        flex-direction: row !important;
+        gap: 5px !important;
+        padding: 0 !important;
+
+        // img {
+        //     height: 100px;
+        //     cursor: pointer;
+        // }
     }
 
-    .breadcrumb {
+    .breadcrumb, hr {
         display: none;
     }
 
@@ -316,14 +379,12 @@
         flex-direction: column;
         gap: 10px;
     }
-}
 
-/** Responsive Tablet **/
-@media (min-width: 520px) and (max-width: 1080px) {
-    .container {
-        display: block;
-        height: auto;
-        padding: 20px;
+    .recently-viewed{
+        display: none;
     }
 
+    .product-reviews {
+        margin-bottom: 5% !important;
+    }
 }
