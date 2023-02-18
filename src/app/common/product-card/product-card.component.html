@@ -1,16 +1,16 @@
 <div class="row">
     <div *ngFor="let item of cardData" class="col-md-3 col-sm-6">
-        <div class="product-grid">
+        <div class="product-grid" (click)="productDetails(item.id)">
             <div class="product-image">
-                <img class="pic-1" [src]="item?.image">
+                <img class="pic" [src]="item?.images[0]">
                 <span class="product-fav"><mat-icon class="nav-link">favorite_border</mat-icon></span>
                 <span class="product-cart"><mat-icon class="nav-link">shopping_cart</mat-icon></span>
             </div>
             <div class="product-content">
                 <h3 class="title">{{item?.title}}</h3>
                 <div class="price">Rs. {{item?.price}}
-                    <span>Rs. {{item?.oldPrice}}</span>
-                    <span>{{item?.percent}}% off</span>
+                    <span>Rs. {{item?.price + 57}}</span>
+                    <span>20% off</span>
                 </div>
             </div>
         </div>

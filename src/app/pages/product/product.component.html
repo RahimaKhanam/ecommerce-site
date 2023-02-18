@@ -1,10 +1,10 @@
 <div class="container">
     <!-- Single product section -->
-    <div class="single-product mt-5">
+    <div class="single-product mt-4">
         <div class="breadcrumb">
-            <span><a href="#">Home</a></span>
-            <span><a href="#">Product</a></span>
-            <span class="active">T-shirt</span>
+            <span><a routerLink="/home">Home</a></span>
+            <span><a routerLink="/home">Product</a></span>
+            <span class="active">{{productData?.category}}</span>
         </div>
         <div class="row">
             <div class="col-6">
@@ -18,13 +18,13 @@
                     </div>
                     <div class="col-2">
                         <div class="product-image-slider">
-                            <img (click)="changeImage(productData.image1)" [src]="productData.image1" alt=""
+                            <img (click)="changeImage(productData?.images[0])" [src]="productData?.images[0]" alt=""
                                 class="image-list">
-                            <img (click)="changeImage(productData.image2)" [src]="productData.image2" alt=""
+                            <img (click)="changeImage(productData?.images[1])" [src]="productData?.images[1]" alt=""
                                 class="image-list">
-                            <img (click)="changeImage(productData.image3)" [src]="productData.image3" alt=""
+                            <img (click)="changeImage(productData?.images[2])" [src]="productData?.images[2]" alt=""
                                 class="image-list">
-                            <img (click)="changeImage(productData.image4)" [src]="productData.image4" alt=""
+                            <img (click)="changeImage(productData?.images[3])" [src]="productData?.images[3]" alt=""
                                 class="image-list">
                         </div>
                     </div>
@@ -38,12 +38,12 @@
                 <!-- Product title, description, price, color, size, quantity and buttons -->
                 <div class="product">
                     <div class="product-title">
-                        <h2>{{productData.title}}</h2>
-                        <p>{{productData.text}}</p>
+                        <h2>{{productData?.title}}</h2>
+                        <p>{{productData?.category}}</p>
                     </div>
-                    <div class="product-price">Rs. {{productData.price}}/-
-                        <span>Rs. {{productData.oldPrice}}/-</span>
-                        <span>{{productData.percent}}% off</span>
+                    <div class="product-price">Rs. {{productData?.price}}/-
+                        <span>Rs. {{productData?.price + 68}}/-</span>
+                        <span>{{productData?.discountPercentage}}% off</span>
                     </div>
                     <hr>
                     <div class="product-color">
@@ -83,11 +83,11 @@
                     <div class="product-quantity">
                         <h4>QUANTITY</h4>
                         <div class="input-number">
-                            <button (click)="Decrease()" class="btn btn-light">
+                            <button (click)="decreaseItem()" class="btn btn-light">
                                 <mat-icon>keyboard_arrow_left</mat-icon>
                             </button>
-                            <input class="btn btn-light" #quantity value="{{productData.quantity}}" disabled>
-                            <button (click)="Increase()" class="btn btn-light">
+                            <input class="btn btn-light" #quantity value="0" disabled>
+                            <button (click)="increaseItem()" class="btn btn-light">
                                 <mat-icon>keyboard_arrow_right</mat-icon>
                             </button>
                         </div>

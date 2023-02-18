@@ -1,14 +1,12 @@
 .product-grid {
     text-align: center;
     padding: 0 0 25%;
-    // border: 1px solid rgba(0, 0, 0, .1);
     overflow: hidden;
     position: relative;
     z-index: 1;
-    // box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
     width: 100%;
     margin-bottom: 3%;
-    // height: auto;
+    cursor: pointer;
 
     .product-image {
         position: relative;
@@ -19,7 +17,7 @@
             height: 400px
         }
 
-        .pic-1 {
+        .pic {
             opacity: 1;
             transition: all .3s ease-out 0s
         }
@@ -99,8 +97,9 @@
 @media only screen and (max-width:1000px) {
     .product-grid {
         padding: 0 0 45%;
-        .product-image{
-            img{
+
+        .product-image {
+            img {
                 height: 300px;
             }
         }
@@ -122,8 +121,8 @@
 }
 
 @media only screen and (max-width:770px) {
-    .product-image{
-        img{
+    .product-image {
+        img {
             height: 300px !important;
             width: auto;
             // height: auto !important;

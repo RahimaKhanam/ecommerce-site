@@ -10,7 +10,8 @@
             display: inline-flex;
             flex-direction: row;
             gap: 8px;
-
+            text-transform: uppercase;
+margin-right: 1%;
             &:not(:last-child)::after {
                 content: '/';
             }
@@ -20,6 +21,11 @@
                 color: black;
                 text-transform: uppercase;
             }
+            
+        }
+        .active{
+            color:#bf2626;
+            font-weight: 450;
         }
     }
 

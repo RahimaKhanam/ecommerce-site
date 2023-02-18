@@ -14,6 +14,7 @@ import { BannerComponent } from './common/banner/banner.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { ProductComponent } from './pages/product/product.component';
 import { RecentlyViewedCardComponent } from './common/recently-viewed-card/recently-viewed-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RecentlyViewedCardComponent } from './common/recently-viewed-card/recen
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    DragScrollModule
+    DragScrollModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
