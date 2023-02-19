@@ -11,7 +11,8 @@
             flex-direction: row;
             gap: 8px;
             text-transform: uppercase;
-margin-right: 1%;
+            margin-right: 1%;
+
             &:not(:last-child)::after {
                 content: '/';
             }
@@ -21,10 +22,11 @@ margin-right: 1%;
                 color: black;
                 text-transform: uppercase;
             }
-            
+
         }
-        .active{
-            color:#bf2626;
+
+        .active {
+            color: #bf2626;
             font-weight: 450;
         }
     }
@@ -242,24 +244,20 @@ margin-right: 1%;
         .product-btn-group {
             display: flex;
             gap: 15px;
+            overflow: hidden;
 
-            .buy-now {
-                background-color: #bf2626;
-                color: #fff;
-                border: 2px solid #bf2626;
-                border-radius: 4px;
-                cursor: pointer;
+            .buy-now,  .add-cart{
                 text-transform: uppercase;
+                overflow: hidden !important;
+                width: 12em;
+                height: auto;
             }
 
-            .add-cart {
-                background-color: white;
-                color: #bf2a2a;
-                border: 2px solid #bf2626;
-                border-radius: 4px;
-                cursor: pointer;
-                text-transform: uppercase;
-            }
+            // .add-cart {
+            //     overflow: hidden !important;
+            //     width: 12em;
+            //     height: auto;
+            // }
         }
 
 
@@ -333,12 +331,14 @@ margin-right: 1%;
     }
 
     .product-image {
-        .col-2{
+        .col-2 {
             padding: 0;
         }
+
         .product-image-main {
             height: 200px !important;
-            img{
+
+            img {
                 text-align: center !important;
             }
         }
@@ -357,7 +357,8 @@ margin-right: 1%;
         // }
     }
 
-    .breadcrumb, hr {
+    .breadcrumb,
+    hr {
         display: none;
     }
 
@@ -386,7 +387,7 @@ margin-right: 1%;
         gap: 10px;
     }
 
-    .recently-viewed{
+    .recently-viewed {
         display: none;
     }
 

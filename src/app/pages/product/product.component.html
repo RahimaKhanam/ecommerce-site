@@ -93,8 +93,17 @@
                         </div>
                     </div>
                     <div class="product-btn-group">
-                        <button class="btn buy-now">Buy Now</button>
-                        <button class="btn add-cart">Add to Cart</button>
+                        <button mat-flat-button class="buy-now" color="primary">
+                            <mat-icon> attach_money</mat-icon>
+                            <span> Buy Now </span>
+                        </button>
+                        <button mat-flat-button class="add-cart" color="primary" (click)="addToCart()">
+                            <mat-icon [@animateCheck]="getItemState()+'_check'"
+                                [@hideCheck]="getItemState()+'_check'">check</mat-icon>
+                            <mat-icon [@animateCart]="getItemState()">shopping_cart</mat-icon>
+                            <span [@animateText]="getItemState()+'_text'"
+                                [@hideText]="getItemState()+'_text'"> ADD TO CART </span>
+                        </button>
                     </div>
                 </div>
                 <!-- Accordian -->
