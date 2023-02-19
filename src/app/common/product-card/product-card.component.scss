@@ -10,11 +10,18 @@
 
     .product-image {
         position: relative;
-        transition: all .3s ease 0s;
+        overflow: hidden;
 
         img {
             width: 100%;
-            height: 400px
+            height: 400px;
+            display: block;
+            transition: transform .4s;
+
+            &:hover{
+                transform: scale(1.3);
+                transform-origin: 50% 50%;
+            }
         }
 
         .pic {
