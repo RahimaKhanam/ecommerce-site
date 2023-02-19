@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
         this.apiService.productsByCategoryList(data).subscribe((list: any) => {
           console.log("List", list.products);
           this.productCategoryWise = list.products;
-          // if(this.searchedFilter) this.apiService.searchedTerm.next('')
+          if(this.searchedFilter) this.apiService.searchedTerm.next('')
         })
       }
     });
