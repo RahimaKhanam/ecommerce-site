@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { dealsContent, peopleData, tshirts } from 'src/app/common/content';
+import { dealsContent, peopleData } from 'src/app/common/content';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { ApiService } from 'src/app/service/api.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  productCategories: any;
+  productCategoryWise: any;
   tshirtData: any;
   dressesData: any;
   dealsData = dealsContent;
@@ -20,6 +22,14 @@ export class HomeComponent implements OnInit {
   }
 
   loadAPI() {
+    this.apiService.getProductCategories().subscribe((list: any) => {
+      console.log("List", list);
+      this.productCategories = list;
+    })
+    this.apiService.productsList().subscribe((list: any) => {
+      console.log("List", list.products);
+      this.productCategoryWise = list.products;
+    })
     this.apiService.productsByCategoryList('mens-shirts').subscribe((list: any) => {
       console.log("List", list.products);
       this.tshirtData = list.products;
@@ -27,6 +37,14 @@ export class HomeComponent implements OnInit {
     this.apiService.productsByCategoryList('womens-dresses').subscribe((list: any) => {
       console.log("List", list.products);
       this.dressesData = list.products;
+    })
+  }
+
+  selectionChange(data :any){
+    console.log(data.target.value);
+    this.apiService.productsByCategoryList(data.target.value).subscribe((list: any) => {
+      console.log("List", list.products);
+      this.productCategoryWise = list.products;
     })
   }
 

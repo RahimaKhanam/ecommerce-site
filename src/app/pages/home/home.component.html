@@ -1,6 +1,17 @@
 <banner></banner>
 
 <div class="container">
+    <!-- Trending Products -->
+    <div class="trendy-heading"><span>Trending</span><span>PRODUCTS</span></div>
+    <div class="filter">
+        <label for="category">Please select the category </label>
+        <select class="form-select" id="category" (change)="selectionChange($event)">
+            <option selected disabled>All Products</option>
+            <option *ngFor="let category of productCategories" [value]="category" style="text-transform: capitalize;">
+                {{category}}</option>
+        </select>
+    </div>
+    <product-card [cardData]="productCategoryWise"></product-card>
     <!-- Trending T-shirts -->
     <div class="trendy-heading"><span>Trending</span><span>T-SHIRTS</span></div>
     <product-card [cardData]="tshirtData"></product-card>

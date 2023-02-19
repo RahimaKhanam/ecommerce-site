@@ -26,4 +26,8 @@ export class ApiService {
   getProductById(id:any) {
     return this.http.get(`${baseUrl}/${id}`)
   }
+  // Get Categories
+  getProductCategories() {
+    return this.http.get(`${baseUrl}/categories`)
+  }
 }
