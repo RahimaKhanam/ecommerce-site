@@ -35,21 +35,15 @@
           <li class="nav-item">
             <mat-icon class="nav-link">person_outline</mat-icon>
           </li>
-          <li class="nav-item">
-            <!-- <form class="d-flex " role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit"> <mat-icon>search</mat-icon>
-              </button>
-            </form> -->
-            <form class="d-flex search" role="search">
-              <input type="text" class="searchTerm" placeholder="What are you looking for?">
+          <li>
+            <div class="d-flex search" role="search">
+              <input type="text" #term class="searchTerm" placeholder="What are you looking for?"  (keyup.enter)="keyEnter($event)">
               <button type="submit" class="searchButton">
                 <mat-icon class="searchIcon">search</mat-icon>
               </button>
-            </form>
+            </div>
           </li>
         </ul>
-  
       </div>
     </div>
   </nav>

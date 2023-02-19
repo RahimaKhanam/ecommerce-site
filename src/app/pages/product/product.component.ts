@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
-import { animate, state, style, transition, trigger} from "@angular/animations";
+import { animate, state, style, transition, trigger } from "@angular/animations";
 
 @Component({
   selector: 'product',
@@ -92,29 +92,16 @@ import { animate, state, style, transition, trigger} from "@angular/animations";
     ])
   ]
 })
+
 export class ProductComponent implements OnInit {
   @ViewChild('quantity') quantityInput: any;
-
-  // productData = {
-  //   mainImage: '../../../assets/products/p1a.webp',
-  //   image1: '../../../assets/products/p1a.webp',
-  //   image2: '../../../assets/products/p1b.webp',
-  //   image3: '../../../assets/products/p1c.webp',
-  //   image4: '../../../assets/products/p1a.webp',
-  //   title: 'Half Sleve T-shirt for Men',
-  //   text: "Men's Wear, T-Shirt",
-  //   price: '299',
-  //   oldPrice: '499',
-  //   percent: '40',
-  //   quantity: 0
-  // }
   productData: any;
   mainImage: any;
   quantity = 0;
   panelOpenState = false;
   tshirtData: any;
   id: any;
-  cartState= 'ready';
+  cartState = 'ready';
 
   constructor(private apiService: ApiService, private router: Router, private route: ActivatedRoute) { }
 

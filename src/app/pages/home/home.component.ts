@@ -13,12 +13,39 @@ export class HomeComponent implements OnInit {
   tshirtData: any;
   dressesData: any;
   dealsData = dealsContent;
-  peopleData= peopleData;
+  peopleData = peopleData;
+  filterState: any;
+  searchedFilter: any;
+  searchedTerm: any;
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.loadAPI();
+    // Retrive data releavnt to the searched term
+    this.apiService.searchedTerm.subscribe(data => {
+      console.log(data);
+      this.searchedTerm = data;
+      if (data) {
+        this.apiService.searchProduct(data).subscribe((list: any) => {
+          console.log("List", list.products);
+          this.productCategoryWise = list.products;
+          if(this.searchedTerm) this.apiService.searchedCategory.next('')
+        })
+      }
+    });
+    // Preserve state of the searched filter
+    this.apiService.searchedCategory.subscribe(data => {
+      console.log(data);
+      this.searchedFilter = data;
+      if (data) {
+        this.apiService.productsByCategoryList(data).subscribe((list: any) => {
+          console.log("List", list.products);
+          this.productCategoryWise = list.products;
+          // if(this.searchedFilter) this.apiService.searchedTerm.next('')
+        })
+      }
+    });
   }
 
   loadAPI() {
@@ -40,12 +67,14 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  selectionChange(data :any){
+  selectionChange(data: any) {
     console.log(data.target.value);
     this.apiService.productsByCategoryList(data.target.value).subscribe((list: any) => {
       console.log("List", list.products);
       this.productCategoryWise = list.products;
     })
+    // Save state of the searched filter
+    this.apiService.searchedCategory.next(data.target.value);
   }
 
 }
